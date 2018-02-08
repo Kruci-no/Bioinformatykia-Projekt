@@ -66,56 +66,7 @@ def alignment(seqs, go, ge ,s,ret_max=50, linear_memory = False,local = False,ti
         return alignment_with_no_time_limit(seqs, go, ge ,s,ret_max , linear_memory ,local)
         
 
-if __name__ == "__main__":
-    s1= "AAAAA"
-    s2= "AA"
-    s3= "A"
-    tab = [s1, s2 ,s3]
-    ge = -0.5
-    go = 0
-    s =[4,-3]
-    max_mathing = 3
-    """X = alignment_with_no_time_limit(tab, go, ge , s ,max_mathing ,local = False)
-    #print(X)
-    s1= "AAAA"
-    s2= "AA"
-    s3= "A"
-    tab = [s1, s2 ,s3]
-    ge = -0.5
-    go = 0
-    s =[4,-3]
-    max_mathing = 3
-    X = alignment_with_no_time_limit(tab, go, ge , s ,max_mathing ,local = True)
-    #print(X)
-    tab = [s1, s2 ]
-    ge = -0.5
-    go = -1
-    s =[1,-3]
-    max_mathing = 50
-    X = alignment_with_no_time_limit(tab, go, ge , s ,max_mathing ,local = False)
-    #print(X)
-    tab = [s1, s2 ]
-    ge = -0.5
-    go = -1
-    s =[1,-3]
-    max_mathing = 50
-    X = alignment_with_no_time_limit(tab, go, ge , s ,max_mathing ,local = True)
-    #print(X)"""
-    tab = [s1, s2 ]
-    ge = -0.5
-    go = -1
-    s =[4,-3]
-    max_mathing = 3
-    X = alignment(tab, go, ge , s ,max_mathing ,local = False,time_limit=10 ,linear_memory = False)
-    print(X)
-    
-    """tab = [s1, s2 ]
-    ge = -0.5
-    go = 0
-    s =[4,-3]
-    max_mathing = 100
-    X = alignment(tab, go, ge , s ,max_mathing ,local = False,time_limit=10,linear_memory=True)
-    print(X)"""
+
     
     
     
