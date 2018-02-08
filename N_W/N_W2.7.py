@@ -53,6 +53,7 @@ def alignment(seqs, go, ge ,s,ret_max=50, linear_memory = False,local = False,ti
         if (p.is_alive()):
             p.terminate()
             p.join()
+            print("Program is running too long")
             return -1
         else:
             p.join()
