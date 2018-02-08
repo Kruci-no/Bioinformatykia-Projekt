@@ -161,13 +161,54 @@ def multidimesional_N_W_algoritm(seqs, g , s , max_mathing):
 
 
 if __name__ == "__main__":
-    s1= "AAAAAA"
-    s2= "AAA"
-    s3= "A"
+    s1= "AA"
+    s2= "AA"
+    s3= "AA"
     tab = [s1, s2 ,s3]
     ge = -0.5
-    go = 0
     s =[10,-3]
     max_mathing = 3
     X = multidimesional_N_W_algoritm(tab, ge , s ,max_mathing)
-    print(X)
+    score = X[0]
+    if(not score == 60):
+        raise AssertionError 
+        
+        
+    s1= "A"
+    s2= "A"
+    s3= "A"
+    s4= "A"
+    tab = [s1, s2 ,s3, s4]
+    ge = -0.5
+    s =[10,-3]
+    max_mathing = 3
+    X = multidimesional_N_W_algoritm(tab, ge , s ,max_mathing)
+    score = X[0]
+    if(not score == 60):
+        raise AssertionError 
+        
+        
+    s1= "B"
+    s2= "B"
+    s3= "A"
+    s4= "A"
+    tab = [s1, s2 ,s3, s4]
+    ge = -0.5
+    s =[1,-1]
+    max_mathing = 3
+    X = multidimesional_N_W_algoritm(tab, ge , s ,max_mathing)
+    score = X[0]
+    if(not score == -2):
+        raise AssertionError
+    s1= "AAAA"
+    s2= "A"
+    s3= "A"
+    s4= "A"
+    tab = [s1, s2 ,s3, s4]
+    ge = -1
+    s =[1,-1]
+    max_mathing = 3
+    X = multidimesional_N_W_algoritm(tab, ge , s ,max_mathing)
+    score = X[0]
+    if(not score == -3):
+        raise AssertionError

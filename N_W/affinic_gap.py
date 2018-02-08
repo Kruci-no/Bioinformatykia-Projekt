@@ -179,8 +179,16 @@ if __name__ == "__main__":
     ge = - 1
     go =  0
     X = linear_gap_algorytm(seqs, go, ge , [1,-1] ,100)
-    print(X)
-    #H = init_matrix_F([len(s) + 1 for s in seqs],go , ge)
-    #print(H)
-   # X = multidimesional_N_W_algoritm_local(tab, g , s ,max_mathing)
-    #print(X)
+    score = X[0]
+    if(not score == 1):
+        raise AssertionError
+        
+    s1= "BBAAA"
+    s2= "AAA"
+    seqs = [s1, s2 ]
+    ge = - 1
+    go =  -1
+    X = linear_gap_algorytm(seqs, go, ge , [1,-1] ,100)
+    score = X[0]
+    if(not score == 0):
+        raise AssertionError

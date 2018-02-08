@@ -3,7 +3,7 @@ from matching_function import create_matching_function
 
 def init_matrix_H(seqs_lenght,go ,ge):
     """
-    seqs lenght - array with contain lenght of all sequence
+    seqs lenght - array with contain lenght of all sequences
     go - gap open penalty
     ge - gap extextion penalty
     return intitial H matrix
@@ -26,7 +26,7 @@ def init_matrix_E(seqs_lenght, go ,ge):
 
 def init_matrix_F(seqs_lenght, go ,ge ):
     """
-    seqs lenght - array with contain lenght of all sequence
+    seqs lenght - array with contain lenght of all sequences
     go - gap open penalty
     ge - gap extextion penalty
     return intitial F matrix
@@ -165,12 +165,12 @@ def linear_gap_local_algorytm(seqs, go, ge , s ,max_number_of_matching):
 
 if __name__ == "__main__":
     print()
-    s1= "AAAA"
+    s1= "ABBA"
     s2= "AA"
     seqs = [s1, s2 ]
-    ge = - 1
-    go = - 3
-    X = linear_gap_local_algorytm(seqs, go, ge , [1,-1],100)
-    print(X)
-    #H = init_matrix_F([len(s) + 1 for s in seqs],go , ge)
-    #print(H)
+    ge = - 3
+    go = - 4
+    X = linear_gap_local_algorytm(seqs, go, ge , [100,-1],100)
+    score = X[0]
+    if(not score == 190):
+        raise AssertionError

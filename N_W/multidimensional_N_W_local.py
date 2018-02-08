@@ -150,25 +150,56 @@ def multidimesional_N_W_algoritm_local(seqs, g , s , max_mathing):
 
 
 if __name__ == "__main__":
-    s1= "AAAAAA"
-    s2= "AAA"
+    s1= "AA"
+    s2= "AA"
+    s3= "AA"
+    tab = [s1, s2 ,s3]
+    ge = -0.5
+    s =[10,-3]
+    max_mathing = 3
+    X = multidimesional_N_W_algoritm_local(tab, ge , s ,max_mathing)
+    score = X[0]
+    if(not score == 60):
+        raise AssertionError 
+        
+        
+    s1= "A"
+    s2= "A"
+    s3= "A"
+    s4= "A"
+    tab = [s1, s2 ,s3, s4]
+    ge = -0.5
+    s =[10,-3]
+    max_mathing = 3
+    X = multidimesional_N_W_algoritm_local(tab, ge , s ,max_mathing)
+    score = X[0]
+    if(not score == 60):
+        raise AssertionError 
+    s1= "BA"
+    s2= "A"
+    s3= "A"
+    s4= "A"
+    tab = [s1, s2 ,s3, s4]
+    ge = -100
+    s =[1,-1]
+    max_mathing = 3
+    X = multidimesional_N_W_algoritm_local(tab, ge , s ,max_mathing)
+    score = X[0]
+    print(score)
+    print(X)
+    if(not score == 6):
+        raise AssertionError
+    s1= "AAAA"
+    s2= "A"
     s3= "A"
     tab = [s1, s2 ,s3]
-    g = -0.5
-    s =[4,-3]
+    ge = -1
+    s =[1,-1]
     max_mathing = 3
-    X = multidimesional_N_W_algoritm_local(tab, g , s ,max_mathing)
-    print(X)
-    "poruszamy sie na brzegu"
-    """H = init_matrix([len(s) + 1 for s in tab])
-    d = create_matching_function([1,-3],-1)
-    fill_H_all(H, tab , d)
-    print(H)
-    #winner = np.argwhere(H == np.max(H))
-    #winner = winner
-    #print(winner)
-    #print (winner.flatten().tolist())
-    print(matching(H,tab,d,100))"""
+    X = multidimesional_N_W_algoritm_local(tab, ge , s ,max_mathing)
+    score = X[0]
+    if(not score == 3):
+        raise AssertionError
     
     
     

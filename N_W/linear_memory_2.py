@@ -122,6 +122,8 @@ if __name__ == "__main__":
     d = create_matching_function([1,-1] , ge)
     H = init_matrix_H([len(seq) + 1 for seq in seqs] ,ge)
     X = linear_algorytm(seqs,  ge , [1,-1], 100, 7*2)
-    print(X)
+    score = X[0]
+    if(not score == 1):
+        raise AssertionError
 
     
